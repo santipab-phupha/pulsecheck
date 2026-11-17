@@ -1,0 +1,36 @@
+{
+  "records": 1540,
+  "people": 24,
+  "prior": {
+    "show_bad": 411,
+    "show_good": 747,
+    "retry_bad": 310,
+    "retry_good": 72,
+    "missing": 0
+  },
+  "refined": {
+    "show_bad": 375,
+    "show_good": 783,
+    "retry_bad": 310,
+    "retry_good": 72,
+    "missing": 0
+  },
+  "prior_displayed_errors_corrected": 45,
+  "prior_displayed_good_now_wrong": 9,
+  "per_100": {
+    "prior": {
+      "show_bad": 26.68831168831169,
+      "show_good": 48.506493506493506,
+      "retry_bad": 20.12987012987013,
+      "retry_good": 4.675324675324675,
+      "missing": 0.0
+    },
+    "refined": {
+      "show_bad": 24.350649350649352,
+      "show_good": 50.84415584415584,
+      "retry_bad": 20.12987012987013,
+      "retry_good": 4.675324675324675,
+      "missing": 0.0
+    }
+  }
+}

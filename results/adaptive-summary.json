@@ -1,0 +1,38 @@
+{
+  "records": 1540,
+  "subjects": 24,
+  "old": {
+    "show_bad": 696,
+    "show_good": 373,
+    "retry_bad": 441,
+    "retry_good": 11,
+    "missing": 19
+  },
+  "new": {
+    "show_bad": 624,
+    "show_good": 446,
+    "retry_bad": 380,
+    "retry_good": 90,
+    "missing": 0
+  },
+  "new_on_old_accepts": {
+    "available": 1069,
+    "outside_5": 629
+  },
+  "old_bad_high": 151,
+  "old_bad_low": 545,
+  "old_bad_rest": 504,
+  "old_bad_low_quality": 567,
+  "old_bad_fewer_peaks": 637,
+  "old_bad_same_count": 30,
+  "median_peak_deficit": 4.0,
+  "old_errors_now": {
+    "show_bad": 388,
+    "show_good": 133,
+    "retry_bad": 146,
+    "retry_good": 29,
+    "missing": 0
+  },
+  "bad_displays_prevented_per_100": 4.675324675324675,
+  "additional_retries_per_100": -0.06493506493506493
+}

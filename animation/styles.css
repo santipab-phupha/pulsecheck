@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #eff6fa;
+  background: #09141e;
+  --surface: #12283b;
+  --text-muted: #b4c6d5;
+  --blue: #8ed6ff;
+  --mint: #94f1dc;
+  --peach: #ffb59f;
+}
+* { box-sizing: border-box }
+body { margin: 0; min-height:100dvh; display:grid; align-items:center }
+button,input { font: inherit }
+button { cursor:pointer }
+button:focus-visible,a:focus-visible,input:focus-visible { outline: 2px solid var(--blue); outline-offset:4px }
+[hidden] { display:none !important }
+.player { width:min(1320px,96%); margin: 18px auto }
+.stage { container-type:inline-size; aspect-ratio:16/9; display:flex; flex-direction:column; overflow:hidden; border:1px solid #395264; border-radius:24px; background:radial-gradient(ellipse at 82% 0%,#1b4356,transparent 62%),#0d1d2e; padding:2.5%; position:relative }
+.mast,.stage-footer { display:flex; justify-content:space-between; align-items:center; color:var(--text-muted); gap:10px }
+.mast { padding-bottom: 1.2%; border-bottom: 1px solid #a5ccdf33 }
+.wordmark { font-weight:720; color:white; font-size: clamp(15px,2cqw,25px); letter-spacing:-.035em }
+.wordmark i { display:inline-grid; place-items:center; width:1.65em; height:1.65em; border-radius:.46em; background:#1c698d; color:white; font-style:normal }
+.scene-label,.stage-footer { font-size:clamp(10px,1.2cqw,16px) }
+.scene-label { font-weight:650; color:#b7e6ff }
+.stage-footer { padding-top:.8%; border-top:1px solid #a5ccdf33 }
+.slides { flex:1; display:grid; min-height:0; padding:2.6% 0 }
+.slide { grid-area:1/1; align-self:center; min-width:0; animation:enter .4s cubic-bezier(.2,.8,.2,1) both }
+@keyframes enter { from { opacity:0; transform:translateY(7px) } to { opacity:1; transform:none } }
+h1,h2,h3,p,figure { margin:0 }
+h1,h2 { color:white; font-weight:680; line-height:1.06; letter-spacing:-.05em; text-wrap:balance }
+h1 { font-size:clamp(23px,4.55cqw,60px) }
+h2 { font-size:clamp(23px,4.45cqw,58px) }
+em { font-style:normal; color:var(--blue) }
+.slide p { margin-top:.65em; font-size:clamp(12px,1.65cqw,21px); color:var(--text-muted); line-height:1.4 }
+.opening,.camera,.close { display:grid; grid-template-columns:.95fr 1.05fr; gap:4%; align-items:center }
+.intro figure { margin-top:4%; height:12.3cqw; overflow:hidden; border-radius:14px; background:var(--surface) }
+.intro img,.camera-photo img { width:100%; height:100%; display:block; object-fit:cover; object-position:center 57% }
+.monitor { padding:4%; border:1px solid #4b6576; border-radius:18px; background:#111f2c; box-shadow:0 12px 30px #0004 }
+.monitor-title { display:flex; justify-content:space-between; font-size:clamp(11px,1.35cqw,18px); gap:8px; color:var(--text-muted) }
+.monitor-title strong { color:white }
+.trace { color:var(--mint); font-size:clamp(9px,1.2cqw,14px); margin-top:4% }
+.ecg { color:var(--peach) }
+.trace canvas { display:block; width:100%; height:8cqw; min-height:32px; margin-top:3px }
+.time-axis { display:flex; justify-content:space-between; color:var(--text-muted); font-size:clamp(9px,1.12cqw,13px); margin-top:5px }
+.cases { display:grid; grid-template-columns:1fr 1fr; gap:2%; margin-top:3% }
+.case,.step,.artifact { min-width:0; padding:5%; border:1px solid #466173; border-radius:18px; background:#132c40; opacity:.72; transition:opacity .32s ease, border-color .32s ease }
+.case.active,.step.active,.artifact { opacity:1; border-color:#82d3f1 }
+.case h3 { font-size:clamp(15px,2.15cqw,28px); letter-spacing:-.03em }
+.case dl { display:grid; grid-template-columns:repeat(3,1fr); gap:5%; margin:5% 0 }
+.case dt { color:var(--text-muted); font-size:clamp(9px,1.15cqw,15px) }
+.case dd { margin:2px 0 0; font-weight:700; font-size:clamp(16px,3.15cqw,41px); font-variant-numeric:tabular-nums; letter-spacing:-.06em }
+.case dl div:nth-child(2) dd { color:var(--blue) }
+.case p { border-top:1px solid #9dc3d333; padding-top:.65em; color:var(--mint); font-size:clamp(10px,1.4cqw,17px) }
+.case.miss p { color:var(--peach) }
+.flow { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4%; margin-top:4% }
+.step { display:grid; align-content:center; gap:6px; min-height:13cqw; padding:9% }
+.step b { font-size:clamp(14px,2.45cqw,31px) }
+.step span { color:var(--text-muted); font-size:clamp(11px,1.45cqw,19px) }
+.evaluation-top p { margin-top:.3em }
+.evaluation table { width:100%; border-collapse:collapse; margin-top:1.5%; font-size:clamp(11px,1.65cqw,21px); font-variant-numeric:tabular-nums }
+.evaluation caption { text-align:left; color:var(--text-muted); margin-bottom:4px }
+.evaluation th,.evaluation td { text-align:right; padding:.53em 1.1em; border-bottom:1px solid #aec2d342 }
+.evaluation th:first-child { text-align:left; padding-left:0 }
+.evaluation tbody th { font-weight:500 }
+.evaluation td:last-child { color:var(--mint); background:#9ee6ff13; font-weight:700 }
+.evaluation .limitation { color:var(--peach) }
+.camera .caveat { color:var(--peach); font-size:clamp(10px,1.35cqw,17px) }
+.camera-card { justify-self:center; width:90%; padding:4%; border-radius:20px; background:#eef5fa; color:#152d42 }
+.camera-card h3 { font-size:clamp(14px,1.7cqw,22px); margin-bottom:4% }
+.camera-photo { height:14.3cqw; border-radius:12px; position:relative; overflow:hidden; isolation:isolate }
+.camera-photo::after { content:""; position:absolute; inset:0; background:#071c2e60 }
+.camera-photo span { position:absolute; z-index:1; bottom:8%; left:5%; color:#fff; font-size:clamp(21px,4cqw,52px); font-weight:700 }
+.camera-photo small { font-size:.45em }
+.camera-progress { height:5px; border-radius:5px; overflow:hidden; background:#cddce5; margin:5% 0 4% }
+.camera-progress i { display:block; height:100%; background:#08779c }
+.capture-cta { display:block; text-align:center; padding:3%; border-radius:12px; color:#fff; font-weight:650; background:#146aaf; font-size:clamp(11px,1.4cqw,18px) }
+.artifact { padding:6% }
+.artifact p { margin:0 0 4%; color:white; font-weight:700 }
+.artifact a { display:flex; justify-content:space-between; color:var(--blue); min-height:2.5em; align-items:center; text-decoration:none; border-top:1px solid #a4bcd43d; font-size:clamp(11px,1.4cqw,18px) }
+.artifact a:hover { text-decoration:underline }
+.controls { display:flex; align-items:center; gap:10px; margin-top:10px }
+.controls button,.chapters button { border:1px solid #3b5265; padding:8px 12px; min-height:44px; color:#d9e9f2; background:#112537; border-radius:10px }
+#play { background:#a5ecff; color:#153447; border-color:transparent; font-weight:680; min-width:90px }
+#seek { flex:1; width:64px; height:44px; accent-color:#a5ecff }
+#clock { white-space:nowrap; color:var(--text-muted); font-variant-numeric:tabular-nums; font-size:13px }
+.chapters { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 }
+.chapters button { color:var(--text-muted); font-size:13px }
+.chapters button[aria-current] { color:#fff; border-color:#87c9ef }
+.transcript { color:var(--text-muted); font-size:14px; line-height:1.5 }
+.transcript summary { cursor:pointer; width:max-content }
+.transcript p { margin:12px 0 }
+#status { color:var(--peach); margin-top:8px }
+.player:fullscreen { width:100%; height:100%; margin:0; padding:8px; display:flex; flex-direction:column; justify-content:center; background:#09141e }
+.player:fullscreen .stage { width:min(100%, calc((100dvh - 67px) * 16 / 9)); margin-inline:auto; flex-shrink:0; border-radius:0 }
+.player:fullscreen .chapters,.player:fullscreen .transcript { display:none }
+@media(max-width:600px) {
+  .stage { aspect-ratio:auto; min-height:550px; border-radius:17px; padding:15px }
+  .slides { padding:12px 0 }
+  .opening,.camera,.close { grid-template-columns:1fr; gap:14px }
+  .intro figure { height:78px }
+  .trace canvas { height:40px }
+  .monitor { padding:10px }
+  .stage-footer { padding-top:7px }
+  .cases,.flow { grid-template-columns:1fr 1fr; gap:8px; margin-top:12px }
+  .case,.step { padding:10px }
+  .case dl { gap:2px }
+  .case dt { letter-spacing:-.025em }
+  .camera-card { width:100% }
+  .camera-photo { height:120px }
+  .controls { gap:5px; flex-wrap:wrap }
+  .controls button { padding-inline:7px; font-size:12px }
+  #play { min-width:65px }
+  .player:fullscreen { overflow:auto; justify-content:flex-start }
+}
+@media(prefers-reduced-motion:reduce) { .slide { animation:none } .step,.case { transition:none } }

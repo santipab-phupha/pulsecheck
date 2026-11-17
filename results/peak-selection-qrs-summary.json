@@ -1,0 +1,153 @@
+{
+  "records": 1540,
+  "people": 24,
+  "training_reference": "qrs_bpm",
+  "prior": {
+    "show_bad": 624,
+    "show_good": 446,
+    "retry_bad": 380,
+    "retry_good": 90,
+    "missing": 0
+  },
+  "primary_retry_target": 0.23,
+  "candidate": {
+    "show_bad": 545,
+    "show_good": 613,
+    "retry_bad": 307,
+    "retry_good": 75,
+    "missing": 0
+  },
+  "retry_target_results": {
+    "0.2": {
+      "show_bad": 594,
+      "show_good": 627,
+      "retry_bad": 258,
+      "retry_good": 61,
+      "missing": 0
+    },
+    "0.23": {
+      "show_bad": 545,
+      "show_good": 613,
+      "retry_bad": 307,
+      "retry_good": 75,
+      "missing": 0
+    },
+    "0.25": {
+      "show_bad": 527,
+      "show_good": 605,
+      "retry_bad": 325,
+      "retry_good": 83,
+      "missing": 0
+    },
+    "0.3": {
+      "show_bad": 473,
+      "show_good": 587,
+      "retry_bad": 379,
+      "retry_good": 101,
+      "missing": 0
+    }
+  },
+  "candidate_before_quality_gate": {
+    "show_bad": 852,
+    "show_good": 688,
+    "retry_bad": 0,
+    "retry_good": 0,
+    "missing": 0
+  },
+  "selected_channel": {
+    "R": 458,
+    "G": 549,
+    "B": 533
+  },
+  "accepted_error_audit": {
+    "total": 624,
+    "below_ecg": 404,
+    "above_ecg": 220,
+    "median_abs_error": 13.777825250280898,
+    "fewer_peaks": 351,
+    "more_peaks": 186,
+    "equal_peaks": 87,
+    "rest": 447,
+    "dataset_low_quality": 537,
+    "outcomes": {
+      "show_bad": 339,
+      "show_good": 138,
+      "retry_bad": 120,
+      "retry_good": 27,
+      "missing": 0
+    }
+  },
+  "prior_good_outcomes": {
+    "show_bad": 68,
+    "show_good": 410,
+    "retry_bad": 35,
+    "retry_good": 23,
+    "missing": 0
+  },
+  "prior_good_by_target": {
+    "0.2": {
+      "show_bad": 73,
+      "show_good": 414,
+      "retry_bad": 30,
+      "retry_good": 19,
+      "missing": 0
+    },
+    "0.23": {
+      "show_bad": 68,
+      "show_good": 410,
+      "retry_bad": 35,
+      "retry_good": 23,
+      "missing": 0
+    },
+    "0.25": {
+      "show_bad": 65,
+      "show_good": 406,
+      "retry_bad": 38,
+      "retry_good": 27,
+      "missing": 0
+    },
+    "0.3": {
+      "show_bad": 57,
+      "show_good": 399,
+      "retry_bad": 46,
+      "retry_good": 34,
+      "missing": 0
+    }
+  },
+  "reference_sensitivity": {
+    "qrs_all": {
+      "records": 1540,
+      "prior": {
+        "show_bad": 537,
+        "show_good": 533,
+        "retry_bad": 366,
+        "retry_good": 104,
+        "missing": 0
+      },
+      "candidate": {
+        "show_bad": 411,
+        "show_good": 747,
+        "retry_bad": 310,
+        "retry_good": 72,
+        "missing": 0
+      }
+    },
+    "csv_qrs_agree": {
+      "records": 1130,
+      "prior": {
+        "show_bad": 404,
+        "show_good": 388,
+        "retry_bad": 257,
+        "retry_good": 81,
+        "missing": 0
+      },
+      "candidate": {
+        "show_bad": 303,
+        "show_good": 562,
+        "retry_bad": 214,
+        "retry_good": 51,
+        "missing": 0
+      }
+    }
+  }
+}

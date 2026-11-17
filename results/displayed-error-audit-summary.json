@@ -1,0 +1,33 @@
+{
+  "displayed_errors": 411,
+  "displayed_windows": 1158,
+  "below_qrs": 289,
+  "above_qrs": 122,
+  "median_error_bpm": 10.548719597299339,
+  "fewer_peaks": 282,
+  "equal_peaks": 43,
+  "more_peaks": 86,
+  "at_rest": 276,
+  "displayed_at_rest": 848,
+  "labeled_low_quality": 365,
+  "other_candidate_within_5": 217,
+  "errors_by_person": {
+    "103": 1,
+    "104": 1,
+    "107": 1,
+    "132": 28,
+    "134": 30,
+    "135": 22,
+    "136": 10,
+    "137": 42,
+    "139": 51,
+    "140": 19,
+    "141": 41,
+    "142": 34,
+    "143": 22,
+    "144": 30,
+    "145": 27,
+    "148": 42,
+    "149": 10
+  }
+}

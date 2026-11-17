@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1d2e">
+  <title>PulseCheck · Demo film</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="../demo/assets/recordings.js"></script>
+  <script defer src="timeline.js"></script>
+  <script defer src="player.js"></script>
+</head>
+<body>
+  <main class="player" aria-label="PulseCheck narrated animation">
+    <div class="stage" id="stage">
+      <header class="mast"><span class="wordmark"><i aria-hidden="true">∿</i> PulseCheck</span><span id="scene-label" class="scene-label">Recorded signal</span></header>
+      <div class="slides">
+        <section class="slide opening">
+          <div class="intro">
+            <h1>When should a phone trust its <em>pulse reading?</em></h1>
+            <p>Fingertip camera, compared with ECG.</p>
+            <figure><img src="../demo/assets/measurement-setup.png" alt="Illustration of a finger covering a phone’s rear camera"></figure>
+          </div>
+          <div class="monitor" aria-label="Case 135021, synchronized fingertip PPG and ECG">
+            <div class="monitor-title"><strong>Case 135021</strong><span>10 seconds</span></div>
+            <div class="trace"><span>Fingertip PPG</span><canvas id="ppg" role="img" aria-label="Fingertip PPG trace"></canvas></div>
+            <div class="trace ecg"><span>ECG reference</span><canvas id="ecg" role="img" aria-label="Simultaneous ECG trace and annotated QRS intervals"></canvas></div>
+            <div class="time-axis" aria-hidden="true"><span>0 s</span><span>5 s</span><span>10 s</span></div>
+          </div>
+        </section>
+        <section class="slide comparison" hidden>
+          <h2>One correction. <em>One miss.</em></h2>
+          <div class="cases" id="cases"></div>
+        </section>
+        <section class="slide method" hidden>
+          <h2>From light changes to a <em>pulse estimate.</em></h2>
+          <div class="flow">
+            <div class="step"><b>Capture</b><span>Fingertip PPG</span></div>
+            <div class="step"><b>Score</b><span>Peaks, rhythm, slope</span></div>
+            <div class="step"><b>Check</b><span>Quality and spectral support</span></div>
+            <div class="step"><b>Decide</b><span>Show bpm or request a repeat</span></div>
+          </div>
+        </section>
+        <section class="slide evaluation" hidden>
+          <div class="evaluation-top"><h2>Results on <em>6 held-out people.</em></h2><p>386 fingertip recordings · paired ECG</p></div>
+          <table>
+            <caption>Per 100 attempts</caption>
+            <thead><tr><th scope="col">Outcome</th><th scope="col">Previous</th><th scope="col">Latest</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Wrong reading shown</th><td>28.50</td><td>28.24</td></tr>
+              <tr><th scope="row">Unnecessary repeats</th><td>5.18</td><td>5.18</td></tr>
+              <tr><th scope="row">All repeats</th><td>15.54</td><td>15.54</td></tr>
+            </tbody>
+          </table>
+          <p class="limitation"><strong>109 of 326</strong> displayed readings missed the ±5 bpm tolerance.</p>
+        </section>
+        <section class="slide camera" hidden>
+          <div><h2>Try the <em>phone camera.</em></h2><p>20 seconds. Analyzed on device.</p><p class="caveat">Experimental estimate · ECG validation pending</p></div>
+          <div class="camera-card"><h3>Camera capture preview</h3><div class="camera-photo"><img src="../demo/assets/measurement-setup.png" alt="Fingertip covering the camera, illustrated"><span id="countdown">20 <small>sec</small></span></div><div class="camera-progress"><i id="capture-progress"></i></div><span class="capture-cta">Start Record</span></div>
+        </section>
+        <section class="slide close" hidden>
+          <div><h2>How we’ll <em>test it next.</em></h2><p>Pair phone and ECG recordings across devices.<br>Measure whether a repeat improves the signal.</p></div>
+          <div class="artifact"><p>Reproduce the evaluation</p><a href="../README.md">Run instructions <span aria-hidden="true">↗</span></a><a href="../EVALUATION.md">Protocol and results <span aria-hidden="true">↗</span></a><a href="../results/final-holdout-lock.json">Locked settings <span aria-hidden="true">↗</span></a></div>
+        </section>
+      </div>
+      <footer class="stage-footer"><span>BUT PPG v2.0.0 · PhysioNet · CC BY 4.0</span><span>AI-generated narration</span></footer>
+    </div>
+    <div class="controls">
+      <button type="button" id="play">Play film</button>
+      <input id="seek" type="range" min="0" max="90" value="0" step="0.01" aria-label="Film position in seconds">
+      <span id="clock" aria-hidden="true">0:00 / 1:30</span>
+      <button type="button" id="mute" aria-pressed="false">Mute</button>
+      <button type="button" id="fullscreen">Full screen</button>
+    </div>
+    <p id="status" role="status" hidden></p>
+    <nav class="chapters" aria-label="Film chapters" id="chapters"></nav>
+    <details class="transcript"><summary>Read transcript</summary><div id="transcript"></div></details>
+    <audio id="narration" src="narration.mp3" preload="auto"></audio>
+  </main>
+</body>
+</html>

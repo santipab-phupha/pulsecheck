@@ -1,0 +1,227 @@
+{
+  "attempts": 1540,
+  "people": 24,
+  "previous": {
+    "show_bad": 367,
+    "show_good": 791,
+    "retry_bad": 310,
+    "retry_good": 72,
+    "missing": 0
+  },
+  "revised": {
+    "show_bad": 363,
+    "show_good": 795,
+    "retry_bad": 310,
+    "retry_good": 72,
+    "missing": 0
+  },
+  "displayed_errors_fixed": [
+    {
+      "id": "132099",
+      "person": "132",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 79.00019763051415,
+      "previous_bpm": 72.5456814815415,
+      "revised_bpm": 74.03747631745945,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.26200570335234447,
+      "periodic_power": 0.19827762628964088,
+      "slope_power": 0.220074168275185,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "135021",
+      "person": "135",
+      "previous_error_group": "new_in_slope",
+      "qrs_bpm": 65.03297446592639,
+      "previous_bpm": 74.00156850009265,
+      "revised_bpm": 67.56324912988977,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.260368848637619,
+      "periodic_power": 0.05744729518812766,
+      "slope_power": 0.07444397850974432,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "135084",
+      "person": "135",
+      "previous_error_group": "new_in_slope",
+      "qrs_bpm": 75.9493670886076,
+      "previous_bpm": 87.09272356072799,
+      "revised_bpm": 80.69163318211928,
+      "decision": "restored_before_slope",
+      "peak_power": 0.029151499337323757,
+      "periodic_power": 0.1508398096266047,
+      "slope_power": 0.02316824601013606,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "145091",
+      "person": "145",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 66.92309981548718,
+      "previous_bpm": 75.1400461343166,
+      "revised_bpm": 71.61240675795659,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.08868565865916826,
+      "periodic_power": 0.05858895978801177,
+      "slope_power": 0.05858895978801177,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    }
+  ],
+  "new_displayed_errors": [],
+  "focused_cases": [
+    {
+      "id": "132092",
+      "person": "132",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 73.17073170731707,
+      "previous_bpm": 78.46125178661153,
+      "revised_bpm": 78.46125178661153,
+      "decision": "kept",
+      "peak_power": 0.05304096566898552,
+      "periodic_power": 0.06511284058893071,
+      "slope_power": 0.10490750353296209,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_bad"
+    },
+    {
+      "id": "132099",
+      "person": "132",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 79.00019763051415,
+      "previous_bpm": 72.5456814815415,
+      "revised_bpm": 74.03747631745945,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.26200570335234447,
+      "periodic_power": 0.19827762628964088,
+      "slope_power": 0.220074168275185,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "135021",
+      "person": "135",
+      "previous_error_group": "new_in_slope",
+      "qrs_bpm": 65.03297446592639,
+      "previous_bpm": 74.00156850009265,
+      "revised_bpm": 67.56324912988977,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.260368848637619,
+      "periodic_power": 0.05744729518812766,
+      "slope_power": 0.07444397850974432,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "135084",
+      "person": "135",
+      "previous_error_group": "new_in_slope",
+      "qrs_bpm": 75.9493670886076,
+      "previous_bpm": 87.09272356072799,
+      "revised_bpm": 80.69163318211928,
+      "decision": "restored_before_slope",
+      "peak_power": 0.029151499337323757,
+      "periodic_power": 0.1508398096266047,
+      "slope_power": 0.02316824601013606,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "136096",
+      "person": "136",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 63.357972544878564,
+      "previous_bpm": 72.6791695027141,
+      "revised_bpm": 72.6791695027141,
+      "decision": "kept",
+      "peak_power": 0.05704083463578287,
+      "periodic_power": 0.16100925344298303,
+      "slope_power": 0.145908746908364,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_bad"
+    },
+    {
+      "id": "142021",
+      "person": "142",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 81.52173913043478,
+      "previous_bpm": 86.88628583462567,
+      "revised_bpm": 86.88628583462567,
+      "decision": "kept",
+      "peak_power": 0.08236330229242048,
+      "periodic_power": 0.09108418473634271,
+      "slope_power": 0.08101418396601347,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_bad"
+    },
+    {
+      "id": "145091",
+      "person": "145",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 66.92309981548718,
+      "previous_bpm": 75.1400461343166,
+      "revised_bpm": 71.61240675795659,
+      "decision": "averaged_with_supported_peak",
+      "peak_power": 0.08868565865916826,
+      "periodic_power": 0.05858895978801177,
+      "slope_power": 0.05858895978801177,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_good"
+    },
+    {
+      "id": "148072",
+      "person": "148",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 86.47328548644339,
+      "previous_bpm": 81.0492141802001,
+      "revised_bpm": 81.0492141802001,
+      "decision": "kept",
+      "peak_power": 0.20786813317388225,
+      "periodic_power": 0.22133493384398387,
+      "slope_power": 0.2378528213678826,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_bad"
+    },
+    {
+      "id": "148100",
+      "person": "148",
+      "previous_error_group": "remaining_from_nine",
+      "qrs_bpm": 83.79888268156425,
+      "previous_bpm": 78.37713154768508,
+      "revised_bpm": 78.37713154768508,
+      "decision": "kept",
+      "peak_power": 0.25392596820418145,
+      "periodic_power": 0.25275987012767226,
+      "slope_power": 0.24382937406549887,
+      "previous_outcome": "show_bad",
+      "revised_outcome": "show_bad"
+    }
+  ],
+  "decisions": {
+    "kept": 1076,
+    "retry": 382,
+    "averaged_with_supported_peak": 81,
+    "restored_before_slope": 1
+  },
+  "per_100": {
+    "previous": {
+      "show_bad": 23.83116883116883,
+      "show_good": 51.36363636363637,
+      "retry_bad": 20.12987012987013,
+      "retry_good": 4.675324675324675,
+      "missing": 0.0
+    },
+    "revised": {
+      "show_bad": 23.571428571428573,
+      "show_good": 51.62337662337662,
+      "retry_bad": 20.12987012987013,
+      "retry_good": 4.675324675324675,
+      "missing": 0.0
+    }
+  }
+}

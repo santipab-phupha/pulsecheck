@@ -1,0 +1,45 @@
+{
+  "records": 1540,
+  "people": 24,
+  "peak": {
+    "estimated": 1521,
+    "within_5": 384,
+    "outside_5": 1137,
+    "mae": 20.36508417573302,
+    "median": 16.545454545454547
+  },
+  "spectrum": {
+    "estimated": 1540,
+    "within_5": 325,
+    "outside_5": 1215,
+    "mae": 30.02677049512987,
+    "median": 32.4404296875
+  },
+  "spectrum_on_paired": {
+    "estimated": 1521,
+    "within_5": 322,
+    "outside_5": 1199,
+    "mae": 30.019455487754765,
+    "median": 32.44921875
+  },
+  "gate": {
+    "blocked_bad": 451,
+    "blocked_good": 0,
+    "shown_bad": 764,
+    "shown_good": 325
+  },
+  "concentration_gate": {
+    "blocked_bad": 436,
+    "blocked_good": 32,
+    "shown_bad": 779,
+    "shown_good": 293
+  },
+  "peak_gate": {
+    "blocked_bad": 441,
+    "blocked_good": 11,
+    "shown_bad": 696,
+    "shown_good": 373
+  },
+  "peak_unavailable": 19,
+  "mae_shown": 24.109848484848484
+}

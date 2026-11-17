@@ -1,0 +1,13 @@
+# Preserve the exact bytes used by the published evaluation lock.
+/final_holdout.py -text
+/baseline.py -text
+/adaptive_peaks.py -text
+/compare_quality.py -text
+/peak_selection.py -text
+/reference_audit.py -text
+/refine_displayed_rate.py -text
+/refine_with_waveform_slopes.py -text
+/refine_with_spectral_checks.py -text
+/requirements.txt -text
+/results/fingertip-manifest.csv -text
+/demo/assets/recordings.js -text

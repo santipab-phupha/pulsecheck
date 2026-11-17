@@ -1,0 +1,41 @@
+{
+  "fingertip_records": 1926,
+  "people": 30,
+  "holdout_people": [
+    "100",
+    "109",
+    "133",
+    "138",
+    "146",
+    "147"
+  ],
+  "holdout_records": 386,
+  "development_people": 24,
+  "development_records": 1540,
+  "estimated": 1521,
+  "no_estimate": 19,
+  "within_5": 384,
+  "over_5": 1137,
+  "mae_bpm": 20.36508417573302,
+  "median_error_bpm": 16.545454545454547,
+  "cases": [
+    {
+      "id": "107002",
+      "person": "107",
+      "motion": "0",
+      "peaks": 15,
+      "ppg_bpm": 105.88235294117646,
+      "ecg_bpm": 104.0,
+      "error_bpm": 1.882352941176464
+    },
+    {
+      "id": "149073",
+      "person": "149",
+      "motion": "2",
+      "peaks": 17,
+      "ppg_bpm": 105.88235294117646,
+      "ecg_bpm": 84.0,
+      "error_bpm": 21.882352941176464
+    }
+  ]
+}

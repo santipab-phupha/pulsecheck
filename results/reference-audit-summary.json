@@ -1,0 +1,62 @@
+{
+  "records": 1540,
+  "reference_gap_over_5": 410,
+  "affected_people": {
+    "142": 83,
+    "143": 70,
+    "144": 78,
+    "145": 75,
+    "148": 73,
+    "149": 31
+  },
+  "adaptive_failures": 624,
+  "failure_details": {
+    "bpm_direction": {
+      "high": 220,
+      "low": 404
+    },
+    "fewer_peaks": 351,
+    "matching_count": 87,
+    "more_peaks": 186,
+    "at_rest": 447,
+    "quality_label_0": 537,
+    "abs_error_median": 13.777825250280898
+  },
+  "adaptive_failures_with_reference_gap": 220,
+  "adaptive_failures_within_5_of_qrs": 142,
+  "discordant_waveform_validation": {
+    "available": 410,
+    "within_5_of_qrs": 409,
+    "within_5_of_csv": 2,
+    "all_peaks_within_10_ms": 358
+  },
+  "waveform_examples": [
+    {
+      "id": "132056",
+      "csv_bpm": 83.0,
+      "qrs_bpm": 82.94450112923751,
+      "independent_ecg_bpm": 82.94767093029031,
+      "max_qrs_distance_ms": 1.0,
+      "detected_ecg_peaks": 13,
+      "annotated_ecg_peaks": 13
+    },
+    {
+      "id": "142036",
+      "csv_bpm": 159.0,
+      "qrs_bpm": 72.02881152460985,
+      "independent_ecg_bpm": 72.11538461538461,
+      "max_qrs_distance_ms": 2.0,
+      "detected_ecg_peaks": 12,
+      "annotated_ecg_peaks": 12
+    },
+    {
+      "id": "144059",
+      "csv_bpm": 94.0,
+      "qrs_bpm": 80.9179798332533,
+      "independent_ecg_bpm": 80.86385556393094,
+      "max_qrs_distance_ms": 1.0,
+      "detected_ecg_peaks": 13,
+      "annotated_ecg_peaks": 13
+    }
+  ]
+}

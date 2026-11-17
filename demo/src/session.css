@@ -1,0 +1,236 @@
+.tools,.welcome-actions,.session-row,.dialog-head,.source-footer,.capture-meta { display:flex; align-items:center; gap:12px }
+.tools button,.text-btn,.session-launch,.quiet,.close-btn { min-height:44px; background:transparent; border:0; font-weight:600 }
+.tools button { display:inline-flex; align-items:center; gap:7px; font-size:14px }
+.tools .device-pill,.session-launch { border:1px solid #bfd0cf; padding:0 15px; border-radius:24px; background:#f1f6f5 }
+.device-pill i,.device-status i { width:8px; height:8px; border-radius:50%; background:#6f8085 }
+.device-pill.online i,.device-status i { background:#208772 }
+.count { font:12px var(--mono); border-radius:20px; background:#e6edea; padding:3px 6px }
+.welcome { position:relative; isolation:isolate; overflow:hidden; background:#10313e; border-radius:24px; margin-top:24px; color:white }
+.welcome img { position:absolute; inset:0 0 0 auto; width:60%; height:100%; object-fit:cover; z-index:-2 }
+.welcome::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#10313e 0%,#10313e 37%,#10313ef0 46%,transparent 72%); z-index:-1 }
+.welcome-copy { padding:clamp(22px,3.4vw,48px); max-width:61% }
+.welcome-label { color:#a6e9df; font:12px var(--mono); letter-spacing:.08em; text-transform:uppercase }
+.welcome h1 { margin:12px 0; font-size:clamp(36px,4.5vw,62px) }
+.welcome p { color:#d1e0e5; font-size:15px; line-height:1.5 }
+.welcome-actions { margin-top:20px; flex-wrap:wrap }
+.action { min-height:46px; border:0; border-radius:12px; background:#a8f2e3; color:#123c40; font-weight:680; padding:10px 18px }
+.action:hover { background:#c3f9ec }
+.action span,.session-launch span { margin-left:8px }
+.text-btn { color:#e3eded; padding-inline:6px }
+.text-btn:hover,.quiet:hover { text-decoration:underline }
+.page-title h2 { font:normal clamp(30px,3vw,40px)/1.1 Georgia,serif; letter-spacing:-.045em }
+.session-launch { color:#145b51; background:#e3f4ee }
+.no-photo { display:block }
+.source-footer { margin:-14px 0 24px; justify-content:space-between; color:var(--muted); font-size:13px }
+.device-dialog { padding:0; width:min(420px,calc(100% - 28px)); max-height:90dvh; color:#18353e; border:1px solid #c7d6d2; border-radius:22px; box-shadow:0 25px 100px #071d2b45 }
+.device-dialog::backdrop { background:#0b253590; backdrop-filter:blur(4px) }
+body:has(dialog[open]) { overflow:hidden }
+.dialog-head { justify-content:space-between; padding:10px 14px 10px 23px }
+.dialog-head h2 { font-size:18px; letter-spacing:-.035em }
+.close-btn { width:44px; font-size:25px; color:#4e686e; border-radius:50% }
+.close-btn:hover,.session-row:hover { background:#f0f6f4 }
+.dialog-body { padding:24px; }
+.dialog-body h3 { margin:7px 0; font:normal 34px/1.1 Georgia,serif; letter-spacing:-.04em }
+.subcopy { font-size:14px; color:var(--muted); line-height:1.5 }
+.dialog-body > .action { display:block; width:100%; margin-top:22px }
+.quiet { display:block; margin:6px auto 0; color:var(--muted) }
+.device-status { display:flex; align-items:center; gap:7px; color:#246c61; font-size:13px }
+.pending { opacity:.65; cursor:progress }
+.radar { position:relative; overflow:hidden; height:154px; display:grid; place-items:center; background:repeating-radial-gradient(circle at center,#294e59 0 1px,transparent 2px 25px),#133441 }
+.radar-phone { position:relative; width:41px; height:74px; border:2px solid #9ad9d3; border-radius:10px; background:linear-gradient(120deg,#577a81,#12303b 67%); box-shadow:0 9px 18px #04182070; transform:rotate(12deg) }
+.radar-phone i { position:absolute; inset:7px auto auto 6px; width:10px; height:10px; border-radius:50%; border:2px solid #a1d7d4; background:#10242d }
+.radar-phone::after { content:""; position:absolute; bottom:4px; left:13px; width:11px; height:2px; border-radius:10px; background:#95c2c2 }
+.scanning::before { content:""; position:absolute; width:70px; height:70px; border-radius:50%; border:1px solid #b5f9e9; animation:sweep 1.5s ease-out infinite }
+@keyframes sweep { from { transform:scale(.7); opacity:.8 } to { transform:scale(2.8); opacity:0 } }
+@media(prefers-reduced-motion:reduce) { .scanning::before { animation:none } }
+.capture-view { background:#10313e; color:#c2ebe5; padding:18px 20px; }
+.capture-meta { justify-content:space-between; font:12px var(--mono); margin-bottom:12px }
+.dialog-body .session-bpm { font:600 48px/1.15 "Segoe UI",sans-serif; color:#096f69 }
+.session-bpm small { font:14px var(--mono); letter-spacing:0 }
+.history { padding-top:4px }
+.history .subcopy { margin-bottom:14px }
+.session-row { width:100%; padding:14px 2px; justify-content:space-between; text-align:left; border:0; border-top:1px solid var(--line); background:white }
+.session-row small { display:block; color:var(--muted); margin-top:4px }
+.toast { position:fixed; left:50%; bottom:20px; transform:translateX(-50%); pointer-events:none; z-index:2 }
+.toast.visible { background:#163d40; color:white; padding:10px 18px; border-radius:30px; font-size:14px }
+@media(max-width:660px) {
+  .welcome img { width:100%; height:145px; inset:0 0 auto; object-position:center 52% }
+  .welcome::before { background:linear-gradient(to bottom,transparent 85px,#10313e 146px) }
+  .welcome-copy { max-width:none; padding:121px 20px 18px }
+  .welcome h1 { margin:8px 0 }
+  .welcome-actions { gap:8px; margin-top:12px }
+  .tools { gap:2px }
+  .tools .device-pill { padding:0 9px }
+  .tools button { font-size:12px }
+  .brand { font-size:19px; gap:6px }
+  .brand-mark { width:28px; height:28px }
+  .page-title .session-launch { font-size:12px; padding-inline:12px }
+}
+.camera-preview { position:relative; min-height:190px; overflow:hidden; background:linear-gradient(135deg,#133a45,#081c27) }
+.camera-preview video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.38 }
+.camera-overlay { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; min-height:190px; padding:18px; text-align:center; color:white; text-shadow:0 1px 8px #081c27 }
+.camera-overlay strong { font:600 56px/1 "Segoe UI",sans-serif; letter-spacing:-.05em }
+.camera-overlay strong small { font-size:16px; letter-spacing:0 }
+.camera-overlay > span:last-child { font-size:14px }
+.camera-live { color:#a8f2e3; font:11px var(--mono); letter-spacing:.1em }
+.camera-live i { display:inline-block; width:7px; height:7px; margin-right:6px; border-radius:50%; background:#a8f2e3 }
+.camera-content { padding:20px 24px 22px }
+.camera-content p { color:var(--muted); font-size:14px; line-height:1.5 }
+.camera-progress { height:5px; border-radius:6px; background:#e0eae7; overflow:hidden; margin-bottom:14px }
+.camera-progress span { display:block; height:100%; background:#198775; transition:width .15s linear }
+.camera-actions { display:flex; align-items:center; gap:10px; margin-top:18px }
+.camera-actions .action { flex:1 }
+.camera-actions .quiet { margin:0; padding-inline:14px }
+@media(max-width:500px) { .tools { gap:0 } .tools button { font-size:11px } .tools .device-pill { padding:0 7px } }
+
+/* Product interface */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #182332;
+  background: #f2f4f8;
+  --muted: #667381;
+  --line: #e3e8ef;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100% }
+body { background: radial-gradient(ellipse at 20% 0%, #f9fbff 0, #f2f4f8 55%); min-height: 100vh }
+button, a { -webkit-tap-highlight-color: transparent }
+button { touch-action: manipulation }
+:focus-visible { outline-color: #3984e8; outline-offset: 3px }
+.wrap { width: min(1160px, calc(100% - 48px)) }
+.mast { position: sticky; top: 0; z-index: 5; background: #f9fbfbe6; border-bottom: 1px solid #dce3ea; backdrop-filter: blur(22px) saturate(170%); -webkit-backdrop-filter: blur(22px) saturate(170%) }
+.mast-inner { height: 72px }
+.brand { font-size: 20px; letter-spacing: -.045em; color: #152637 }
+.brand-mark { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(145deg,#438bde,#2560b1); color: #fff; box-shadow: 0 4px 10px #3370b02b }
+.tools { gap: 8px }
+.tools button { padding: 0 13px; border-radius: 999px; color: #34485a; transition: background .2s ease, transform .2s ease }
+.tools button:hover { background: #e8eef5 }
+.tools .device-pill { border: 1px solid #dce4ed; color: #365267; background: #fff }
+.tools .device-pill.online { background: #eaf7f1; color: #236950; border-color: #d2eee0 }
+.tools button:active,.action:active,.play:active,.case-card:active,.session-launch:active { transform: scale(.97) }
+.count { background: #e6edf6; font-family: inherit }
+.welcome { margin-top: 28px; border-radius: 28px; background: #1b3648; box-shadow: 0 14px 32px #172f4714 }
+.welcome::before { background: linear-gradient(90deg,#182e40 0%,#1a3548 37%,#1b3547ed 51%,transparent 78%) }
+.welcome-copy { padding: clamp(30px,4vw,54px) }
+.welcome-label { font: 600 12px/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .07em; color: #c3e0fa }
+.welcome h1 { font: 650 clamp(38px,4.1vw,58px)/1.07 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -.055em; margin: 15px 0 12px }
+.welcome p { color: #dae5ed; font-size: 16px }
+.welcome-actions { gap: 14px; margin-top: 24px }
+.action { background: #1876e5; color: #fff; border-radius: 14px; box-shadow: 0 4px 10px #0c61c622; transition: background .2s ease, transform .2s ease, box-shadow .2s ease }
+.action:hover { background: #0b65d0; box-shadow: 0 7px 16px #0c61c633 }
+.welcome .action { background: #fff; color: #1c4f78; box-shadow: none }
+.welcome .action:hover { background: #edf6ff }
+.text-btn { color: #e8f2fa }
+.page-title { margin: 36px 0 18px }
+.page-title h1,.page-title h2 { font: 700 clamp(28px,3vw,38px)/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -.045em; color: #182332 }
+.page-title > span { font: 500 13px/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #7b8795 }
+.session-launch { background: #e7f1fd; border-color: #d6e8fd; color: #0869cf; transition: background .2s ease, transform .2s ease }
+.session-launch:hover { background: #d8eafb }
+.workspace { gap: 18px }
+.monitor,.library,.evaluation { border: 1px solid #e4e9ef; border-radius: 24px; box-shadow: 0 8px 28px #21364b0b }
+.monitor { color: #f1f7fb; border-color: #142b3d; background: #162d3d; box-shadow: 0 14px 32px #172f4720 }
+.monitor-head { padding: 16px 24px }
+.monitor-head h2 { font-size: 15px; color: #b6c8d4 }
+.monitor-head b { font-family: inherit; font-size: 17px }
+.ecg-toggle { font-size: 13px }
+.switch { width: 34px; height: 20px; border-radius: 15px; padding: 2px; transition: background .2s ease }
+.switch::after { width: 16px; height: 16px; box-shadow: 0 1px 3px #0003; transition: transform .2s ease }
+.ecg-toggle[aria-pressed=true] .switch { background: #4ed3ab }
+.ecg-toggle[aria-pressed=true] .switch::after { transform: translateX(14px); background: #fff }
+.plot-area { background: linear-gradient(135deg,#182f40,#102737) }
+.channel { letter-spacing: .08em }
+.transport { padding: 14px 24px 20px }
+.play { background: #f8fbff; color: #1b4c72; transition: transform .2s ease, background .2s ease }
+.play:hover { background: #dfeeff }
+.transport input { accent-color: #b3e1fa }
+.metrics { background: #fff; color: #1b3040; padding: 22px 24px 20px }
+.metrics dt { font-size: 12px; font-weight: 500 }
+.metrics dd { font-size: clamp(29px,3vw,41px); font-weight: 650; letter-spacing: -.055em }
+.latest dd { color: #1269b1 }
+.verdict { background: #e9f7f1; color: #277461 }
+.verdict.miss { background: #fff3eb; color: #97562f }
+.library { background: #fff }
+.library figure img { height: clamp(165px,15vw,210px) }
+.library figcaption { background: #1c3544c9; backdrop-filter: blur(10px); border-radius: 8px; padding: 5px 8px }
+.library-body { padding: 22px }
+.library h2,.evaluation summary strong { font-size: 19px; font-weight: 650 }
+.case-list { gap: 8px }
+.case-card { background: #f6f8fa; border-color: transparent; border-radius: 15px; min-height: 66px; transition: background .2s ease, border-color .2s ease, transform .2s ease }
+.case-card:hover { background: #eef4fa }
+.case-card[aria-pressed=true] { background: #edf5ff; border-color: #aad1fc; box-shadow: inset 3px 0 #3185e4 }
+.case-info b { font: 650 15px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif }
+.evaluation { margin: 18px 0 32px }
+.evaluation summary { min-height: 72px }
+.expand { transition: transform .2s ease }
+.device-dialog { width: min(440px,calc(100% - 32px)); border: 0; border-radius: 26px; color: #172b3b; box-shadow: 0 24px 90px #0a1e3350; background: #fff }
+.device-dialog[open] { animation: panel-in .28s cubic-bezier(.2,.8,.2,1) }
+.device-dialog::backdrop { background: #10233480; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px) }
+.dialog-head { padding: 14px 16px 14px 24px }
+.dialog-head h2 { font-size: 18px; font-weight: 650 }
+.close-btn { background: #eef2f6; color: #6b7784; width: 36px; min-height: 36px; font-size: 23px }
+.close-btn:hover { background: #e1e8ef }
+.dialog-body h3 { font: 650 28px/1.15 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: -.04em }
+.dialog-body .session-bpm,.camera-overlay strong { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif }
+.radar { background: repeating-radial-gradient(circle at center,#3a5f77 0 1px,transparent 2px 25px),#1b384f }
+.camera-preview { background: linear-gradient(145deg,#1a4257,#112838) }
+.camera-overlay strong { font-weight: 650 }
+.camera-live { color: #b6e6ff }
+.camera-progress span { background: #2084e8 }
+.source-footer { margin-bottom: max(24px,env(safe-area-inset-bottom)); }
+@keyframes panel-in { from { opacity:0; transform:translateY(14px) scale(.98) } to { opacity:1; transform:translateY(0) scale(1) } }
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 32px) }
+  .workspace { gap: 14px }
+  .library { grid-template-columns: minmax(100px,.6fr) 1fr }
+  .library-body { padding: 18px }
+  .no-photo { display:block }
+}
+@media (max-width: 660px) {
+  .mast-inner { height: auto; min-height: 64px; gap: 6px; flex-wrap: wrap; padding: 8px 0 }
+  .brand { font-size: 19px }
+  .brand-mark { width: 32px; height: 32px; border-radius: 10px }
+  .tools { gap: 1px; margin-left: auto }
+  .tools button { padding-inline: 7px; font-size: 11px; white-space: nowrap }
+  .tools .device-pill { padding-inline: 8px }
+  .welcome { margin-top: 18px; border-radius: 24px }
+  .welcome img { height: 156px; object-position: center 53% }
+  .welcome::before { background: linear-gradient(to bottom,transparent 74px,#1b3547ed 149px,#1b3548 176px) }
+  .welcome-copy { padding: 132px 22px 24px; max-width: none }
+  .welcome h1 { font-size: 34px; margin: 9px 0 }
+  .welcome p { font-size: 14px }
+  .welcome-actions { gap: 8px; margin-top: 17px }
+  .welcome-actions .action { min-height: 46px }
+  .page-title { margin: 28px 0 16px }
+  .page-title h1,.page-title h2 { font-size: 28px }
+  .monitor,.library,.evaluation { border-radius: 21px }
+  .monitor-head,.transport,.metrics,.verdict { padding-inline: 18px }
+  .plot-area { padding-inline: 18px }
+  .device-dialog { position: fixed; inset: auto 0 0; margin: 0; width: 100%; max-width: none; max-height: min(88dvh,760px); border-radius: 26px 26px 0 0; padding-bottom: env(safe-area-inset-bottom) }
+  .device-dialog[open] { animation: sheet-in .3s cubic-bezier(.2,.8,.2,1) }
+  .dialog-head { padding-top: 18px }
+  .dialog-head::before { content: ""; position: absolute; width: 36px; height: 4px; top: 7px; left: calc(50% - 18px); border-radius: 10px; background: #d7dde4 }
+}
+@media (max-width: 380px) {
+  .wrap { width: calc(100% - 24px) }
+  .brand { font-size: 17px }
+  .brand-mark { width: 28px; height: 28px }
+  .tools button { padding-inline: 5px; font-size: 10px }
+  .tools .device-pill { padding-inline: 6px }
+  .welcome h1 { font-size: 31px }
+  .metrics dd { font-size: 28px }
+}
+@keyframes sheet-in { from { opacity:.8; transform:translateY(100%) } to { opacity:1; transform:translateY(0) } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important }
+}
+@media (max-width: 500px) {
+  .mast { position: static }
+  .mast-inner { display: block; padding: 12px 0 8px }
+  .brand { min-height: 34px }
+  .tools { display: flex; width: 100%; justify-content: space-between; margin-top: 5px }
+  .tools button { min-height: 44px; padding-inline: 10px; font-size: 12px }
+  .tools .device-pill { padding-inline: 12px }
+  .device-dialog { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch }
+}
+.start-record { width: 100%; margin-top: 14px }
